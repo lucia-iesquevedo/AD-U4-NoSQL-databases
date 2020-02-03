@@ -35,9 +35,11 @@ public class MongoConnection {
         public MongoClient getConnection() {
               return mongoClient;
     }
+
         public MongoDatabase getDatabase() {
             return mongoClient.getDatabase("webstoredb");
         }
+
         public MongoTemplate getTemplate() {
             MongoTemplate mp = new MongoTemplate(mongoClient, "webstoredb");
             return mp;
